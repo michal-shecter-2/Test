@@ -1,0 +1,12 @@
+﻿
+@model List<GoGlobalTravelExam.Models.GitHubRepo>
+
+<h2>Bookmarked Repositories</h2>
+
+@foreach (var repo in Model)
+{
+    <div style="border: 1px solid #ccc; padding: 10px; margin: 5px;">
+        <img src="@repo.owner.avatar_url" width="50" />
+        <strong>@repo.name</strong> - <a href="@repo.html_url" target="_blank">View</a>
+    </div>
+}
